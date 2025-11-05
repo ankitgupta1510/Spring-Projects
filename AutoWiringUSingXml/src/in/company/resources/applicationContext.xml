@@ -9,14 +9,15 @@
 		<property name="city" value="Delhi"></property>
 		<property name="pinCode" value="58585"></property>
 	</bean>
-	<bean class="in.company.beans.Address" id="addId2" autowire-candidate="false">
+	<bean class="in.company.beans.Address" id="addId1" autowire-candidate="false">
 		<property name="city" value="punjab"></property>
 		<property name="pinCode" value="585"></property>
 	</bean>
 	
-	<bean class="in.company.beans.Student" id="stdId" autowire="byType">
+	<bean class="in.company.beans.Student" id="stdId" autowire="byName">
 		<property name="name" value="ANkit"></property>
 		<property name="rollNo" value="55"></property>
+		<property name="address" ref="addId1"></property>
 		
 	</bean>
-</beans>	
+</beans>		
