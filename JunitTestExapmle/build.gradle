@@ -4,12 +4,25 @@ plugins {
     id 'java'
     id 'application'
 }
+
+
 application{
 	mainClass = 'Main.TestApp'
 }
 repositories {
+	mavenCentral()
 }
 
 dependencies {
+	
+	
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.14.1'
     
+	
+    
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
 }
