@@ -1,0 +1,17 @@
+<web-app>
+	<display-name>Todo App</display-name>
+
+    <servlet>
+        <servlet-name>TodoServlet</servlet-name>
+        <servlet-class>com.ankit.API.TodoServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TodoServlet</servlet-name>
+        <url-pattern>/todos</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
+
+

@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'org.gretty:gretty:3.0.9'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'war'
+    id 'eclipse'
+}
+
+apply plugin: 'org.gretty'
+
+gretty {
+    httpPort = 9999
+    contextPath = '/'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+
+    // Servlet API
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+    
+    // Jackson (java-app-spi)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    
+    implementation 'org.springframework:spring-context:5.3.31'
+    
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.springframework:spring-jdbc:5.3.31'
+    
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
