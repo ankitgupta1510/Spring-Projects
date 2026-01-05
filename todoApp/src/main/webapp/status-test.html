@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Delete a task</h2>
+    
+    <form action="http://localhost:9999/todos/status" method="POST">
+        
+        <label>Todo ID (Copy form DB/JSON):</label><br>
+        <input type="text" name="id" placeholder="Enter todoID here"><br><br>
+        
+        <label>New Status:</label><br>
+        <select name="isActive">
+            <option value="true">True (Active)</option>
+            <option value="false">False (Disable)</option>
+        </select><br><br>
+        
+        <input type="submit" value="Update Status">
+    </form>
+</body>
+</html>

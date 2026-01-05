@@ -28,7 +28,7 @@ public class TodoServiceImpl implements TodoService {
 	@Override
 	public Todo createTodo(String userId, String taskTitle) {
 
-		Todo newTodo = new Todo(String.valueOf(System.currentTimeMillis()), userId, taskTitle);
+		Todo newTodo = new Todo(String.valueOf(System.currentTimeMillis()),taskTitle, userId,true);
 //		newTodo.setId("1");
 //		newTodo.setTitle(taskTitle);
 //		newTodo.setUserId(userId);
@@ -42,6 +42,12 @@ public class TodoServiceImpl implements TodoService {
 		myTodo.add(newTodo);
 		return newTodo;
 
+	}
+
+	@Override
+	public void updateTodoStatus(String todoId, boolean isActive) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

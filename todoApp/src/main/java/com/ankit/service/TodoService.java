@@ -9,6 +9,8 @@ public interface TodoService {
 	List<Todo> getAllTodos(String id);
 	
 	Todo createTodo(String userId, String  taskTitle);
+	
+	void updateTodoStatus(String todoId, boolean isActive);
 
 }
 	

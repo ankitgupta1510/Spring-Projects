@@ -10,14 +10,17 @@ public class Todo {
 	private String id;
 	private String title;
 	private String userId;
+	private Boolean isActive;
+	
 	
 	public Todo() {}
 	
-	public Todo(String id, String title, String userId) {
+	public Todo(String id, String title, String userId, Boolean isActive) {
 		
 		this.id = id;
 		this.title = title;
 		this.userId = userId;
+		this.isActive = isActive;
 	}
 	
 	public String getId() {
@@ -38,10 +41,11 @@ public class Todo {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	
-	
-	
-	
-	
+	public Boolean getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
+	}
 
 }
